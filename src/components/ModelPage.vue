@@ -7,13 +7,10 @@
 <script>
 export default {
   name: "ModelPage",
-  props: {
-    msg: String,
-  },
 };
 </script>
 
 <style scoped lang="scss">
-* {
+h1 {
 }
 </style>

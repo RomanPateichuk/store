@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <ModelPage msg="Welcome to Your Vue.js App" />
+    <ModelPage />
+    <p>{{ this.$store.getters.getModel }}</p>
   </div>
 </template>
 

@@ -5,7 +5,19 @@
   </nav>
   <router-view />
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      info: null,
+    };
+  },
+  async mounted() {
+    this.$store.dispatch("GET_REVIEWS_FROM_API");
+    this.$store.dispatch("GET_MODEL_FROM_API");
+  },
+};
+</script>
 <style lang="scss">
 @import "scss-reset/_reset.scss";
 #app {
