@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 import getData from "../services/getData.js";
 export default createStore({
   state: {
-    model: null,
+    model: { data: {} },
     reviews: null,
     model_url:
       "https://rest.bellavka.by/api/v1/products/57791673?include=brand,category,collections,colors,fabrics,heights,kits,season,sizes,photos,videos,styles",
@@ -11,7 +11,21 @@ export default createStore({
   },
   getters: {
     getModel(state) {
-      return state.model;
+      return state.model.data;
+    },
+
+    getFoto(state) {
+      let result = [];
+      let index = 0;
+      for (let item in state.model.data.photos) {
+        if (index === 4) {
+          return result;
+        }
+        result.push(state.model.data.photos[item]);
+        index++;
+      }
+
+      //return state.model.data.photos
     },
 
     getReviews(state) {

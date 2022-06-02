@@ -12,7 +12,7 @@ let GetDataModel = async (url, mutation, commit) => {
     }
   )
     .then((response) => {
-      commit(`${mutation}`, response);
+      commit(`${mutation}`, response.data);
       return response;
     })
     .catch((error) => {

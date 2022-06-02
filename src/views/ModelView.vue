@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <ModelPage />
-    <p>{{ this.$store.getters.getModel }}</p>
   </div>
 </template>
 
