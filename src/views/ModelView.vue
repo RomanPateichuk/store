@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ModelPage from "@/components/ModelPage.vue";
+import ModelPage from "@/components/Model/pages/ModelPage.vue";
 
 export default {
   name: "ModelView",

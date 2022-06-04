@@ -24,8 +24,6 @@ export default createStore({
         result.push(state.model.data.photos[item]);
         index++;
       }
-
-      //return state.model.data.photos
     },
 
     getReviews(state) {

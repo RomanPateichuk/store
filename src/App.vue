@@ -12,6 +12,11 @@ export default {
       info: null,
     };
   },
+
+  created() {
+    // this.$store.model = { data: {} };
+    // this.$store.reviews = null;
+  },
   async mounted() {
     this.$store.dispatch("GET_REVIEWS_FROM_API");
     this.$store.dispatch("GET_MODEL_FROM_API");
