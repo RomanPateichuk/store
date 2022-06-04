@@ -42,7 +42,7 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  name: "Navigation",
+  name: "NavigationSection",
   components: {},
   computed: {
     ...mapGetters(["getModel", "getFoto"]),

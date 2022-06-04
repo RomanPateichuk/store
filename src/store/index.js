@@ -4,6 +4,7 @@ export default createStore({
   state: {
     model: { data: {} },
     reviews: null,
+    loaded: null,
     model_url:
       "https://rest.bellavka.by/api/v1/products/57791673?include=brand,category,collections,colors,fabrics,heights,kits,season,sizes,photos,videos,styles",
     reviews_url:
@@ -14,16 +15,27 @@ export default createStore({
       return state.model.data;
     },
 
-    getFoto(state) {
-      let result = [];
-      let index = 0;
-      for (let item in state.model.data.photos) {
-        if (index === 4) {
-          return result;
-        }
-        result.push(state.model.data.photos[item]);
-        index++;
+    average_rating(state) {
+      let result =[];
+      for (let item of state.reviews.data) {
+        result.push(item.rating)
       }
+        return Math.round(result.reduce((a, b) => (a + b)) / result.length);
+    },
+
+
+      getFoto(state) {
+        let result = [];
+        let index = 0;
+        for (let item in state.model.data.photos) {
+          if (index === 4) {
+            return result;
+          }
+          result.push(state.model.data.photos[item]);
+          index++;
+        }
+
+
     },
 
     getReviews(state) {

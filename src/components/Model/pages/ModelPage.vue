@@ -97,43 +97,22 @@
           </div>
         </div>
       </main>
-
-      <menu class="menu_wrapper">
-        <div class="menu_item">
-          <img src="../../../assets/images/main.png" alt="" />
-          <p class="menu_text">Главная</p>
-        </div>
-
-        <div class="menu_item">
-          <img src="../../../assets/images/catalog.png" alt="" />
-          <p class="menu_text">Каталог</p>
-        </div>
-        <div class="menu_item">
-          <img src="../../../assets/images/box.png" alt="" />
-          <p class="menu_text">Корзина</p>
-        </div>
-        <div class="menu_item">
-          <img src="../../../assets/images/profile.png" alt="" />
-          <p class="menu_text">Профиль</p>
-        </div>
-        <div class="menu_item">
-          <img src="../../../assets/images/contact.png" alt="" />
-          <p class="menu_text">Контакт</p>
-        </div>
-      </menu>
+      <Menu />
     </div>
   </div>
 </template>
 
 <script>
-import Slider from "@/components/Model/molecules/Slider.vue";
-import Navigation from "@/components/Model/molecules/Navigation.vue";
+import Slider from "@/components/Model/molecules/SliderSection.vue";
+import Menu from "@/components/Model/molecules/MenuSection.vue";
+import Navigation from "@/components/Model/molecules/NavigationSection.vue";
 import { mapGetters } from "vuex";
 export default {
   name: "ModelPage",
   components: {
     Slider,
     Navigation,
+    Menu,
   },
   computed: {
     ...mapGetters(["getModel", "getFoto"]),
@@ -362,24 +341,6 @@ export default {
             color: #b0afab;
           }
         }
-      }
-    }
-  }
-
-  .menu_wrapper {
-    display: flex;
-    margin-top: 2rem;
-    margin-bottom: 0.375rem;
-    justify-content: space-around;
-    align-items: center;
-    .menu_item {
-      .menu_text {
-        font-family: "Gilroy";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 14px;
-        color: #282828;
       }
     }
   }

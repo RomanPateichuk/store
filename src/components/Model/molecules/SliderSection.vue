@@ -26,7 +26,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import SliderPanel from "@/components/Model/atoms/SliderPanel.vue";
 import { mapGetters } from "vuex";
 export default {
-  name: "App",
+  name: "SliderSection",
   components: {
     Carousel,
     Slide,
