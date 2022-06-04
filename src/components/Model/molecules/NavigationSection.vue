@@ -58,6 +58,8 @@ export default {
 
 <style scoped lang="scss">
 .navigation {
+  font-family: "Gilroy";
+  font-style: normal;
   display: flex;
   padding: 0;
   margin: 1rem auto;
@@ -77,8 +79,6 @@ export default {
       }
       .count {
         color: #bd9365;
-        font-family: "Gilroy";
-        font-style: normal;
         font-weight: 500;
         font-size: 0.875rem;
         line-height: 1.0625rem;
@@ -87,8 +87,6 @@ export default {
     }
 
     .title {
-      font-family: "Gilroy";
-      font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 17px;

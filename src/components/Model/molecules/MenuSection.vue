@@ -24,7 +24,6 @@
   </menu>
 </template>
 
-
 <script>
 export default {
   name: "MenuSection",
@@ -36,6 +35,8 @@ export default {
 
 <style lang="scss">
 .menu_wrapper {
+  font-family: "Gilroy";
+  font-style: normal;
   display: flex;
   margin-top: 2rem;
   margin-bottom: 0.375rem;
@@ -43,8 +44,6 @@ export default {
   align-items: center;
   .menu_item {
     .menu_text {
-      font-family: "Gilroy";
-      font-style: normal;
       font-weight: 400;
       font-size: 12px;
       line-height: 14px;

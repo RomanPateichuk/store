@@ -1,6 +1,5 @@
 <template>
   <div class="reviews">
-    <h1>reviews</h1>
     <div class="wrapper">
       <div class="reviews_statistics">
         <div class="stars_wrapper">
@@ -8,13 +7,13 @@
             <img
               v-for="star in average_rating"
               :key="star"
-              src="../assets/images/star_active.png"
+              src="../../../assets/images/star_active.png"
               alt=""
             />
             <img
               v-for="star in 5 - average_rating"
               :key="star"
-              src="../assets/images/star_unactive.png"
+              src="../../../assets/images/star_unactive.png"
               alt=""
             />
           </div>
@@ -53,13 +52,13 @@
               <img
                 v-for="star in item.rating"
                 :key="star"
-                src="../assets/images/star_active.png"
+                src="../../../assets/images/star_active.png"
                 alt=""
               />
               <img
                 v-for="star in 5 - item.rating"
                 :key="star"
-                src="../assets/images/star_unactive.png"
+                src="../../../assets/images/star_unactive.png"
                 alt=""
               />
             </div>
@@ -73,6 +72,20 @@
               alt="reviews photo"
             />
           </div>
+
+          <div class="review_answer-wrapper" v-if="item.answers[0]?.value">
+            <img src="../../../assets/images/corner-up-right.svg" alt="" />
+            <div class="review_answer-main">
+              <div class="answer_name">
+                <img src="../../../assets/images/Bellavka.png" alt="" />
+                <p class="answer_autor">Беллавка</p>
+              </div>
+              <p class="answer_text">
+                {{ item.answers[0]?.value }}
+              </p>
+            </div>
+          </div>
+
           <div class="reviews_wrapper_end"></div>
         </div>
       </div>
@@ -109,10 +122,10 @@ export default {
 
 <style lang="scss">
 .wrapper {
+  font-family: "Gilroy";
+  font-style: normal;
   margin: 0 16px;
   .reviews_statistics {
-    font-family: "Gilroy";
-    font-style: normal;
     background: #faf1e8;
     border-radius: 10px;
     width: 95vw;
@@ -187,8 +200,6 @@ export default {
         }
 
         .user_name {
-          font-family: "Gilroy";
-          font-style: normal;
           font-weight: 400;
           font-size: 16px;
           line-height: 19px;
@@ -197,8 +208,7 @@ export default {
 
         .reviews_date {
           margin-left: auto;
-          font-family: "Gilroy";
-          font-style: normal;
+
           font-weight: 400;
           font-size: 14px;
           line-height: 17px;
@@ -207,8 +217,6 @@ export default {
       }
 
       .size_description {
-        font-family: "Gilroy";
-        font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
@@ -230,8 +238,6 @@ export default {
       }
 
       .reviews_text {
-        font-family: "Gilroy";
-        font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
@@ -255,6 +261,36 @@ export default {
       .reviews_wrapper_end {
         border: 1px solid #eeeeee;
         width: 100%;
+        margin-top: 16px;
+      }
+    }
+
+    .review_answer-wrapper {
+      display: flex;
+      align-items: flex-start;
+      .review_answer-main {
+        background: #faf1e8;
+        border-radius: 10px;
+        width: 100%;
+        padding-top: 7px;
+        padding-left: 16px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #282828;
+        .answer_name {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          .answer_autor {
+            padding-left: 8px;
+          }
+        }
+
+        .answer_text {
+          text-align: justify;
+          margin-top: 8px;
+        }
       }
     }
   }
@@ -264,8 +300,6 @@ export default {
     min-height: 48px;
     background: #bd9365;
     border-radius: 35px;
-    font-family: "Gilroy";
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;

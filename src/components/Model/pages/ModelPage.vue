@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Model page</h1>
     <!-- <p>{{ getModel.id }}</p>
     <p>{{ getModel.photos }}</p> -->
     <!-- <p>{{ getModel["price"]["retail"] }}</p> -->
@@ -153,6 +152,8 @@ export default {
 }
 
 .wrapper {
+  font-family: "Gilroy";
+  font-style: normal;
   width: 65vw;
   margin: 0 auto;
   @media (max-width: 375px) {
@@ -166,8 +167,6 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        font-family: "Gilroy";
-        font-style: normal;
         font-size: 1rem;
         line-height: 1.1875rem;
         .fullName {
@@ -187,8 +186,6 @@ export default {
         justify-content: flex-start;
         align-items: flex-end;
         margin-top: 1rem;
-        font-family: "Gilroy";
-        font-style: normal;
         font-size: 0.875rem;
         line-height: 17px;
         .retail {
@@ -271,8 +268,6 @@ export default {
         justify-content: center;
         width: 310px;
         height: 60px;
-        font-family: "Gilroy";
-        font-style: normal;
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
@@ -318,8 +313,6 @@ export default {
         }
 
         .watched_item {
-          font-family: "Gilroy";
-          font-style: normal;
           .price {
             font-weight: 600;
             font-size: 16px;

@@ -32,6 +32,8 @@ export default {
 
 <style style scoped lang="scss">
 .slider_panel {
+  font-family: "Gilroy";
+  font-style: normal;
   display: flex;
   flex-wrap: no-wrap;
   margin: 0 5vw;
@@ -40,8 +42,6 @@ export default {
 
   .btn_wrapper {
     .btn {
-      font-family: "Gilroy";
-      font-style: normal;
       font-weight: 400;
       font-size: 0.75rem;
       line-height: 0.875rem;

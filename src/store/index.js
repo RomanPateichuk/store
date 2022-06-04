@@ -16,26 +16,23 @@ export default createStore({
     },
 
     average_rating(state) {
-      let result =[];
+      let result = [];
       for (let item of state.reviews.data) {
-        result.push(item.rating)
+        result.push(item.rating);
       }
-        return Math.round(result.reduce((a, b) => (a + b)) / result.length);
+      return Math.round(result.reduce((a, b) => a + b) / result.length);
     },
 
-
-      getFoto(state) {
-        let result = [];
-        let index = 0;
-        for (let item in state.model.data.photos) {
-          if (index === 4) {
-            return result;
-          }
-          result.push(state.model.data.photos[item]);
-          index++;
+    getFoto(state) {
+      let result = [];
+      let index = 0;
+      for (let item in state.model.data.photos) {
+        if (index === 4) {
+          return result;
         }
-
-
+        result.push(state.model.data.photos[item]);
+        index++;
+      }
     },
 
     getReviews(state) {
